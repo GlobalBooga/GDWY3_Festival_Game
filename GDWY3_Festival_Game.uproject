@@ -3,6 +3,16 @@
 	"EngineAssociation": "5.4",
 	"Category": "",
 	"Description": "",
+	"Modules": [
+		{
+			"Name": "GDWY3_Festival_Game",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	],
 	"Plugins": [
 		{
 			"Name": "ModelingToolsEditorMode",
@@ -13,6 +23,10 @@
 		},
 		{
 			"Name": "HttpBlueprint",
+			"Enabled": true
+		},
+		{
+			"Name": "SERIALCOM",
 			"Enabled": true
 		}
 	]
