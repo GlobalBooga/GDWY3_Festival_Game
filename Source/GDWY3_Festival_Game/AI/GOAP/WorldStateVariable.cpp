@@ -15,7 +15,7 @@ FString WorldStateVariable::ToString() const
     {
     case EStateVars::None:
         return FString("None: " + valueStr);
-    case EStateVars::NearEnemy:
+    case EStateVars::NearTarget:
         return FString("IsNearEnemy: " + valueStr);
     default:
         return "Null";
