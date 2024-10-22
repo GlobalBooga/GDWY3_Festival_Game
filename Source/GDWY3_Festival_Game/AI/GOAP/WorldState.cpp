@@ -6,3 +6,8 @@
 WorldState::~WorldState()
 {
 }
+
+void WorldState::AddVar(EStateVars var, bool value)
+{
+	variables.Add(WorldStateVariable(var, value));
+}

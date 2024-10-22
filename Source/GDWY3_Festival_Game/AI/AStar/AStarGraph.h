@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "AStarEdge.h"
 
+typedef TPair<AStarNode, AStarEdge> NodeEdgePair;
+
 /**
  * 
  */
@@ -13,7 +15,7 @@ class GDWY3_FESTIVAL_GAME_API AStarGraph
 public:
     AStarGraph();
     ~AStarGraph();
-    void BuildForGoal(const std::pair<AStarNode, AStarEdge>& first, TArray<IAction*> allActions, WorldState startState);
-    TArray<std::pair<AStarNode, AStarEdge>> graph;
-    TArray<std::pair<AStarNode, AStarEdge>*> GetNodeEdgePairsThatPointTo(const AStarNode& node);
+    void BuildForGoal(const NodeEdgePair& first, TArray<IActionInterface*> allActions, WorldState startState);
+    TArray<NodeEdgePair> graph;
+    TArray<NodeEdgePair*> GetNodeEdgePairsThatPointTo(const AStarNode& node);
 };

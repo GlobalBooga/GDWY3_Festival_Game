@@ -13,7 +13,7 @@ class GDWY3_FESTIVAL_GAME_API AStarNode
 public:
 
 public:
-    AStarNode() : visited(false), state(WorldState()), fCost(0) {}
+    AStarNode() : visited(false), fCost(0), state(WorldState()) {}
     AStarNode(WorldState rep) : visited(false), fCost(0), state(rep) {}
 	~AStarNode();
     bool visited;
@@ -21,9 +21,9 @@ public:
     WorldState const& GetWorldState() const { return state; }
 
     // checks if the states match
-    bool operator==(const AStarNode& other)
+    bool operator==(const AStarNode& other) const
     {
-        return this->state.name == other.state.name && this->state.IsEqualTo(other.state);
+        return this->state.name.Equals(other.state.name) && this->state.IsEqualTo(other.state);
     }
 
 private:

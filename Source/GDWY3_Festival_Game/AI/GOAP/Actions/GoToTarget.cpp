@@ -1,8 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "ActionPlanner.h"
+#include "GoToTarget.h"
 
-ActionPlanner::~ActionPlanner()
+bool UGoToTarget::Perform()
 {
+    return false;
 }

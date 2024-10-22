@@ -15,8 +15,8 @@ public:
 	~Agent();
     FString name;
     WorldState currentWorldState;
-    TArray<class IAction*> allActions;
+    TArray<class IActionInterface*> allActions;
 
-    void AddAction(IAction* action) { allActions.Add(action); }
+    void AddAction(IActionInterface* action) { allActions.Add(action); }
 
 };

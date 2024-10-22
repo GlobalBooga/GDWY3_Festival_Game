@@ -12,10 +12,8 @@
 class GDWY3_FESTIVAL_GAME_API AStarEdge
 {
 public:
-
-public:
     AStarEdge() : origin(AStarNode()), destination(AStarNode()), action(nullptr) {}
-    AStarEdge(class AStarNode origin, AStarNode destination, IAction* action) : origin(origin), destination(destination), action(action) {}
+    AStarEdge(class AStarNode origin, AStarNode destination, IActionInterface* action) : origin(origin), destination(destination), action(action) {}
 	~AStarEdge();
     AStarNode origin;
     AStarNode destination;
@@ -23,9 +21,9 @@ public:
     bool IsValid() const { return action != nullptr; }
     bool IsRedundant(const WorldState& context);
     int GetCost() const { return action ? action->GetCost() : 0; }
-    IAction* GetAction() const { return action; }
+    IActionInterface* GetAction() const { return action; }
 
 private:
-    IAction* action;
+    IActionInterface* action;
 
 };
